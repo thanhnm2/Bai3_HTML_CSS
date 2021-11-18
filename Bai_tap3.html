@@ -8,28 +8,49 @@
 
 <body>
 <form method="get" action="simpleform.html" class="wufoo">
-    <h2>Order Form</h2>
-    <p>what whould you like to buy?</p>
+    <h2>Market Research Survey</h2>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+    <p>What is your yearly income range?</p>
     <select>
-        <option value="" >A</option>
-        <option> B (+  0,5$)</option>
-        <option> C (+  0.5$)</option>
+        <option value="" >18-24</option>
+        <option> 25-34</option>
+        <option> 35-50</option>
+        <option> 50+</option>
+    </select>
+    <p>What is your yearly income range?</p>
+    <select>
+        <option value="" > 0$ - 25000$</option>
+        <option> 25000$ - 50000$</option>
+        <option> 50000$ - 100000$</option>
+        <option> 100000$+</option>
     </select>
 <!--        tao radio-->
-        <p>How many would you like to order?</p>
-        <input type="radio" name="rd"/> 1 - $10 <br/>
-        <input type="radio" name="rd"/> 2 - $20 <br/>
-        <input type="radio" name="rd"/> 3 - $25 <br/>
+        <p>Gender Identity</p>
+        <input type="radio" name="rd"/> Male <br/>
+        <input type="radio" name="rd"/> Female <br/>
+        <input type="radio" name="rd"/> Nonbynary<br/>
+        <input type="radio" name="rd"/> Other<br/>
+    <input id="Field505_other" name="Field505_other_Other" type="text" class="field text other" value="" maxlength="250" onclick="document.getElementById('Field505_3').checked = 'checked';handleRadioOther('Field505', true);" onkeyup="handleInput(this);validateRange(505, 'character');" onchange="handleInput(this);" tabindex="0">
+    <label id="Field505_otherlabel" class="other" for="Field505_other" style="display: block;">
+        Maximum of <var id="rangeMaxMsg505">250</var> characters.&nbsp;&nbsp;&nbsp; <em class="currently" style="display: inline;">Currently Used: <var id="rangeUsedMsg505">0</var> characters.</em>
+    </label>
 <!--        tạo text file-->
-        <p>Name <span style="color: red"></span></p>
-        <input type="text" name="firtsname" placeholder="FirstName" size="15"/>
-        <input type="text" name="lastname" placeholder="LastName" size="15"/>
-        <p>Email</p>
-     <input type="text" name="email" size="30"/>
-    <p>Phone Number</p>
-    <input type = "text" name="phone1" size="5"/> -
-    <input type = "text" name="phone2" size="5"/> -
-    <input type = "text" name="phone3" size="5"/>
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+    <input id="1" name="produce1" type="checkbox" class="field checkbox" value="Product 1" tabindex="0" onchange="handleInput(this);">Product 1<br/>
+    <input id="2" name="produce2" type="checkbox" class="field checkbox" value="Product 2" tabindex="0" onchange="handleInput(this);">Product 2<br/>
+    <input id="3" name="produce3" type="checkbox" class="field checkbox" value="Product 3" tabindex="0" onchange="handleInput(this);">Product 3<br/>
+
+    <p>How often would you use our new product?</p>
+    <input type="radio" name="rd"/> Daily <br/>
+    <input type="radio" name="rd"/> weekly <br/>
+    <input type="radio" name="rd"/> Monthly<br/>
+
+    <p>What would you pay for the new product?</p>
+    $<input type = "text" name="phone1" size="5"/> .
+    <p>Dollars</p>
+    <input type = "text" name="phone2" size="5"/>
+    <p>Cents</p>
 <!--    Tạo button-->
     <p><input type="button" name="btSubmit" value="submit"/></p>
 
